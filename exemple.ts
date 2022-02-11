@@ -2,11 +2,13 @@ import { serve, Response } from "https://deno.land/std@0.104.0/http/server.ts";
 import { readerFromStreamReader } from "https://deno.land/std/io/mod.ts";
 const server = serve({ port: 6955 });
 
+// this exemple show how to clone => https://web.archive.org/web/20210429083050/https://cyberdream.space/
 
-const WEBSITEURL = `http://www.exemple.com/`
+
+const WEBSITEURL = `https://cyberdream.space/`
 const CLEANURL = WEBSITEURL.replace('//', '')
-const PROXYURL = "${PROXYURL}/"    // the public url of this proxy
-const FIRSTID = `20191125222569` // time stamp in URL
+const PROXYURL = "https://archiveorgproxy.alice-snow.me"    // the public url of this proxy
+const FIRSTID = `20210529083208` // time stamp in URL
 
 
 async function main(request) {
